@@ -35,11 +35,7 @@ inline fun <reified VM : BaseViewModel> Fragment.hostedViewModel(
 ): Lazy<VM> {
     val nearestHost by lazy { nearestHost() ?: throw IllegalArgumentException("Fragment not attached to a Coordinator Host") }
     return lazy(LazyThreadSafetyMode.NONE) {
-        try {
-            nearestHost.coordinator.provideFactory() as VM
-        } catch (e: Exception) {
-            viewModels<VM>().value
-        }
+        viewModels<VM>().value
     }
 
 }
