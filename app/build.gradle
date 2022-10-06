@@ -1,0 +1,54 @@
+plugins {
+  id 'com.android.application'
+  id 'org.jetbrains.kotlin.android'
+  id "org.jetbrains.kotlin.kapt"
+  id 'dagger.hilt.android.plugin'
+  id 'kotlin-parcelize'
+}
+
+android {
+  namespace 'personal.ianroberts.coordinatorpattern'
+  compileSdk 33
+
+  defaultConfig {
+    applicationId "personal.ianroberts.coordinatorpattern"
+    minSdk 23
+    targetSdk 33
+    versionCode 1
+    versionName "1.0"
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
+  buildFeatures {
+    viewBinding true
+  }
+}
+
+dependencies {
+
+  implementation "androidx.core:core-ktx:$ktxCore"
+  implementation "androidx.appcompat:appcompat:$appCompat"
+  implementation "com.google.android.material:material:$material"
+  implementation "androidx.constraintlayout:constraintlayout:$constraintLayout"
+
+  implementation "androidx.activity:activity-ktx:$activity"
+  implementation "androidx.fragment:fragment-ktx:$fragment"
+
+  implementation "com.google.dagger:hilt-android:$hiltVersion"
+  kapt "com.google.dagger:hilt-compiler:$hiltVersion"
+  kapt "androidx.hilt:hilt-compiler:$hiltCompiler"
+}
