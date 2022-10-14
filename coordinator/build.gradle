@@ -1,5 +1,5 @@
 plugins {
-  id 'com.android.application'
+  id 'com.android.library'
   id 'org.jetbrains.kotlin.android'
   id "org.jetbrains.kotlin.kapt"
   id 'dagger.hilt.android.plugin'
@@ -7,17 +7,15 @@ plugins {
 }
 
 android {
-  namespace 'personal.ianroberts.coordinatorpattern'
-  compileSdk 33
+  namespace 'personal.ianroberts.navigation'
+  compileSdk 32
 
   defaultConfig {
-    applicationId "personal.ianroberts.coordinatorpattern"
     minSdk 23
-    targetSdk 33
-    versionCode 1
-    versionName "1.0"
+    targetSdk 32
 
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    consumerProguardFiles "consumer-rules.pro"
   }
 
   buildTypes {
@@ -33,24 +31,15 @@ android {
   kotlinOptions {
     jvmTarget = '1.8'
   }
-  buildFeatures {
-    viewBinding true
-  }
 }
 
 dependencies {
+  implementation 'androidx.core:core-ktx:1.7.0'
 
-  implementation project(':coordinator')
-  implementation project(':feature')
+  api "androidx.fragment:fragment-ktx:$fragment"
+  api "androidx.activity:activity-ktx:$activity"
 
-  implementation "androidx.core:core-ktx:$ktxCore"
-  implementation "androidx.appcompat:appcompat:$appCompat"
-  implementation "androidx.constraintlayout:constraintlayout:$constraintLayout"
-
-  implementation "androidx.activity:activity-ktx:$activity"
-  implementation "androidx.fragment:fragment-ktx:$fragment"
-
-  implementation "com.google.dagger:hilt-android:$hiltVersion"
+  api "com.google.dagger:hilt-android:$hiltVersion"
   kapt "com.google.dagger:hilt-compiler:$hiltVersion"
   kapt "androidx.hilt:hilt-compiler:$hiltCompiler"
 }
