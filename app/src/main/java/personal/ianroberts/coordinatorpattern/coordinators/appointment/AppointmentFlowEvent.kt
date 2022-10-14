@@ -1,4 +1,4 @@
-package personal.ianroberts.coordinatorpattern.appointment
+package personal.ianroberts.coordinatorpattern.coordinators.appointment
 
 import kotlinx.parcelize.Parcelize
 import personal.ianroberts.coordinatorpattern.navigation.CoordinatorEvent

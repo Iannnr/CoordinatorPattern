@@ -25,7 +25,7 @@ abstract class BaseViewModel : ViewModel() {
     private val _events = Channel<Any>(BUFFERED)
     val events = _events.receiveAsFlow()
 
-    protected fun sendCoordinatorEvent(event: Any) = viewModelScope.launch {
+    fun sendCoordinatorEvent(event: Any) = viewModelScope.launch {
         _events.send(event)
     }
 }
@@ -34,9 +34,6 @@ abstract class BaseViewModel : ViewModel() {
 inline fun <reified VM : BaseViewModel> Fragment.hostedViewModel(
 ): Lazy<VM> {
     val nearestHost by lazy { nearestHost() ?: throw IllegalArgumentException("Fragment not attached to a Coordinator Host") }
-    return lazy(LazyThreadSafetyMode.NONE) {
-        viewModels<VM>().value
-    }
-
+    return viewModels()
 }
 

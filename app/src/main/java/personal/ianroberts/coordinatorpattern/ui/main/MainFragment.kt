@@ -9,9 +9,9 @@ import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import personal.ianroberts.coordinatorpattern.CoordinatorHost
 import personal.ianroberts.coordinatorpattern.R
-import personal.ianroberts.coordinatorpattern.appointment.AppointmentCoordinator
-import personal.ianroberts.coordinatorpattern.appointment.AppointmentFlowEvent
-import personal.ianroberts.coordinatorpattern.appointment.AppointmentNavigator
+import personal.ianroberts.coordinatorpattern.coordinators.appointment.AppointmentCoordinator
+import personal.ianroberts.coordinatorpattern.coordinators.appointment.AppointmentFlowEvent
+import personal.ianroberts.coordinatorpattern.coordinators.appointment.AppointmentNavigator
 import personal.ianroberts.coordinatorpattern.basket.BasketCoordinator
 import personal.ianroberts.coordinatorpattern.basket.BasketFlowEvent
 import personal.ianroberts.coordinatorpattern.basket.BasketNavigator

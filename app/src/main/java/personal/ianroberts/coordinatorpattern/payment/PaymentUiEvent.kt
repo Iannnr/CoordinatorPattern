@@ -5,5 +5,5 @@ import personal.ianroberts.coordinatorpattern.navigation.CoordinatorEvent
 
 @Parcelize
 sealed class PaymentUiEvent : CoordinatorEvent {
-    object SayHello : PaymentUiEvent()
+    data class SayHello(val paymentMethod: String) : PaymentUiEvent()
 }

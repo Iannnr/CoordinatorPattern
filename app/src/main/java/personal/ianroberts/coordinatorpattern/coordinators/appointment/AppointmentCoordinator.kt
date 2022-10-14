@@ -1,4 +1,4 @@
-package personal.ianroberts.coordinatorpattern.appointment
+package personal.ianroberts.coordinatorpattern.coordinators.appointment
 
 import dagger.hilt.android.scopes.FragmentScoped
 import personal.ianroberts.coordinatorpattern.BaseViewModel

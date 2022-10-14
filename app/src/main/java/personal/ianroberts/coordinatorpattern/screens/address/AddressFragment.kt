@@ -1,4 +1,4 @@
-package personal.ianroberts.coordinatorpattern.address
+package personal.ianroberts.coordinatorpattern.screens.address
 
 import android.os.Bundle
 import android.view.View

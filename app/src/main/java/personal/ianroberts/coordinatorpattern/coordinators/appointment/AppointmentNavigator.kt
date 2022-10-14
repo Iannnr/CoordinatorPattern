@@ -1,4 +1,4 @@
-package personal.ianroberts.coordinatorpattern.appointment
+package personal.ianroberts.coordinatorpattern.coordinators.appointment
 
 import android.os.Parcelable
 import androidx.fragment.app.Fragment

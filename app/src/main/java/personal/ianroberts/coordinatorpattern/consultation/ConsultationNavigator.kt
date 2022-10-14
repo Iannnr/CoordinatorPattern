@@ -18,9 +18,6 @@ class ConsultationNavigator : Fragment(R.layout.fragment_headless), CoordinatorH
     @Inject
     override lateinit var coordinator: ConsultationCoordinator
 
-    private var _binding: FragmentHeadlessBinding? = null
-    private val binding get() = _binding!!
-
     override fun <SCREEN : Parcelable> navigateTo(screen: SCREEN) {
         when (screen) {
             ConsultationFlowEvent.SayHello -> childFragmentManager.commit {

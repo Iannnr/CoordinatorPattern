@@ -2,7 +2,7 @@ package personal.ianroberts.coordinatorpattern.basket
 
 import dagger.hilt.android.scopes.FragmentScoped
 import personal.ianroberts.coordinatorpattern.BaseViewModel
-import personal.ianroberts.coordinatorpattern.address.AddressUiEvent
+import personal.ianroberts.coordinatorpattern.screens.address.AddressUiEvent
 import personal.ianroberts.coordinatorpattern.navigation.Coordinator
 import personal.ianroberts.coordinatorpattern.navigation.FlowNavigator
 import javax.inject.Inject

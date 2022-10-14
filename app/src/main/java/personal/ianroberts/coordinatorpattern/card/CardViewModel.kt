@@ -8,5 +8,5 @@ import javax.inject.Inject
 class CardViewModel @Inject constructor(
 ) : BaseViewModel() {
 
-
+    fun sayHello() = sendCoordinatorEvent(CardUiEvent.SayHello)
 }
